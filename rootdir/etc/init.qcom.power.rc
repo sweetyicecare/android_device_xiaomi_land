@@ -24,6 +24,19 @@ on boot
     write /dev/cpuset/system-background/cpus "0-3"
     write /dev/cpuset/top-app/cpus "0-7"
 
+    # Override readahead to 128KiB
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/read_ahead_kb 128
+    write /sys/block/dm-3/queue/read_ahead_kb 128
+    write /sys/block/mmcblk0/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sdb/queue/read_ahead_kb 128
+    write /sys/block/sdc/queue/read_ahead_kb 128
+    write /sys/block/sdd/queue/read_ahead_kb 128
+    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/sdf/queue/read_ahead_kb 128
+
     # Bring all cores online
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
