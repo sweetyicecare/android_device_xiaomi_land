@@ -92,3 +92,7 @@ persist.vendor.sys.usb.config.extra=none
 # Wifi
 wifi.interface=wlan0
 
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
