@@ -35,6 +35,9 @@ chown -LR system.system /proc/touchpanel
 start_copying_prebuilt_qcril_db
 echo 1 > /data/vendor/radio/db_check_done
 
+# Remove recovery cache from persist
+rm -rf /mnt/vendor/persist/cache/recovery
+
 #
 # Make modem config folder and copy firmware config to that folder for RIL
 #
