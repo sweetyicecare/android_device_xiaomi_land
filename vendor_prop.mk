@@ -121,6 +121,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
+# Nitz
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.nitz_plmn="" \
+    persist.vendor.radio.nitz_lons_0="" \
+    persist.vendor.radio.nitz_lons_1="" \
+    persist.vendor.radio.nitz_lons_2="" \
+    persist.vendor.radio.nitz_lons_3="" \
+    persist.vendor.radio.nitz_sons_0="" \
+    persist.vendor.radio.nitz_sons_1="" \
+    persist.vendor.radio.nitz_sons_2="" \
+    persist.vendor.radio.nitz_sons_3="" \
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
