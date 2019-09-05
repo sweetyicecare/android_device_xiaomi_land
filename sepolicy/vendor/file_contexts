@@ -50,6 +50,9 @@
 /sys/devices/soc/soc:qcom,bcl/power_supply/bcl/type     u:object_r:power_sysfs:s0
 /sys/devices/soc/msm-bcl-19/power_supply/fg_adc/type    u:object_r:power_sysfs:s0
 
+# Root files
+/firmware(/.*)?                                 u:object_r:firmware_file:s0
+
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db	u:object_r:rild_file:s0
 
