@@ -433,6 +433,7 @@ PRODUCT_PACKAGES += \
 # VNDK-SP
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
+    libwui \
     vndk_package
 
 # WiFi
