@@ -379,7 +379,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
 
 on charger
     setprop persist.sys.usb.config mass_storage
-    load_system_props
     start vendor.qcom-post-boot
 
 service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
