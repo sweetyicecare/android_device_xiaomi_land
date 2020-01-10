@@ -133,6 +133,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9,1 \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.use_old_mnc_mcc_format=true
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
