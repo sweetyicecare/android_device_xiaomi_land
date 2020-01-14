@@ -132,6 +132,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     ro.telephony.default_network=9,1 \
     ro.telephony.call_ring.multiple=false \
+    ro.telephony.use_old_mnc_mcc_format=true
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
