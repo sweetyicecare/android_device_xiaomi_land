@@ -21,6 +21,12 @@
         android:title="@string/tilt_sensor_title">
 
         <SwitchPreference
+            android:key="gesture_raise_to_wake"
+            android:defaultValue="true"
+            android:title="@string/wake_gesture_title"
+            android:summary="@string/wake_gesture_summary" />
+
+        <SwitchPreference
             android:key="gesture_pick_up"
             android:defaultValue="false"
             android:title="@string/pick_up_gesture_title"
