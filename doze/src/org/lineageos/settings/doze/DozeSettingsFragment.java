@@ -46,6 +46,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
     private View mSwitchBar;
 
     private SwitchPreference mPickUpPreference;
+    private SwitchPreference mRaiseToWakePreference;
     private SwitchPreference mHandwavePreference;
     private SwitchPreference mPocketPreference;
 
@@ -69,6 +70,10 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         mPickUpPreference = (SwitchPreference) findPreference(Utils.GESTURE_PICK_UP_KEY);
         mPickUpPreference.setEnabled(dozeEnabled);
         mPickUpPreference.setOnPreferenceChangeListener(this);
+
+        mRaiseToWakePreference = (SwitchPreference) findPreference(Utils.GESTURE_RAISE_TO_WAKE_KEY);
+        mRaiseToWakePreference.setEnabled(dozeEnabled);
+        mRaiseToWakePreference.setOnPreferenceChangeListener(this);
 
         mHandwavePreference = (SwitchPreference) findPreference(Utils.GESTURE_HAND_WAVE_KEY);
         mHandwavePreference.setEnabled(dozeEnabled);
@@ -129,6 +134,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         mSwitchBar.setActivated(isChecked);
 
         mPickUpPreference.setEnabled(isChecked);
+        mRaiseToWakePreference.setEnabled(isChecked);
         mHandwavePreference.setEnabled(isChecked);
         mPocketPreference.setEnabled(isChecked);
     }
