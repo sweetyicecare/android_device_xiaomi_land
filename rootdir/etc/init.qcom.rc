@@ -47,7 +47,6 @@ on early-boot
     write /dev/ipa 1
 
     # Allow subsystem (modem etc) debugging
-    write /sys/kernel/debug/bootkpi/kpi_values "M - Start adsp"
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
 
