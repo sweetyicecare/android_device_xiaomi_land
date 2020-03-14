@@ -69,9 +69,14 @@ on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
 service vendor.qseecomd /vendor/bin/qseecomd
-    class core
-    user root
-    group root
+   class core
+   user root
+   group root
+   writepid /dev/cpuset/system-background/tasks
+
+on property:vendor.sys.listeners.registered=*
+    setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
+    setprop vendor.sys.keymaster.loaded ${vendor.sys.listeners.registered}
 
 service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/vendor/etc/thermal-engine.conf}
     class main
