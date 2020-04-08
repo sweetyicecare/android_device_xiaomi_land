@@ -62,8 +62,8 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
     android.hardware.audio@6.0 \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.common@5.0 \
