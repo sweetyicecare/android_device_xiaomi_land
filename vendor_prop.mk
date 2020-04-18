@@ -76,6 +76,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=0
 
+# Widevine
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
