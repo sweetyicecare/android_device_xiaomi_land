@@ -1,2 +1,5 @@
 # Camera
 type vendor_camera_prop, property_type;
+
+# Hwkeys
+type qemu_hw_mainkeys_prop, property_type;
