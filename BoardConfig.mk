@@ -161,6 +161,9 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mido
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8953
 
+# Libshim
+TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
+
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
