@@ -370,7 +370,7 @@ PRODUCT_COPY_FILES += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_mido
+    vendor.lineage.touch@1.0-service.xiaomi_land
 
 # Trust HAL
 PRODUCT_PACKAGES += \
