@@ -601,6 +601,22 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|b626d9bbf7043c66c8ef903c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|75335443a33a06a03eecfa714dfe9f1c0c4df2b1
 vendor/lib64/libwvhidl.so|4af61fdcf1186700ea7ee23c607fb9ce5fd0f0e8
 
+# Fingerprint - from stock patched
+bin/gx_fpcmd:vendor/bin/gx_fpcmd|490028aae2ebb9f8b6fb176360104945282226dc 
+bin/gx_fpd:vendor/bin/gx_fpd|a4e071d34e46d403a79e8f8fe51d9be051cac9dc 
+lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.msm8937.so|f91241d131fab2a4b9272fe8e0825b9bcddb3221 
+lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so|580b1fc694003651c05961c8b3f8dd4dff698ab9 
+lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so|5ca617bf4ca6899570491c3725cf40b0896dc6c0 
+lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so|c66aa3eafd9dd208fb81529b8d63d8a00e80c2d6 
+lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so|63e1a095a6688137573b0b2d3503019497e0bb4b 
+lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so|c9166911d157260b12610a2b2800585e984fbf5a 
+lib64/libfp_client.so:vendor/lib64/libfp_client.so|c74fac2826f1ef76c32f7bb532c21cfd7bc3c852 
+lib64/libfpnav.so:vendor/lib64/libfpnav.so|588301735456b31b09aa0779a7f46481056868dd 
+lib64/libfpservice.so:vendor/lib64/libfpservice.so|7bfd1abd31551833079e6ffe3138fa9faf9e9040 
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.land|cf73241facae5e4a7ad092f2cda0f8e00c2f5bd9 
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.land.rc|db6f25e70a9dcd7d599e2b0fd297f941bb4a61ed
+vendor/lib64/libbindergx.so|eb676b92d13a7835aaab309d5c692151993e016f
+
 # FM Radio - from LA.UM.8.6.r1-04000-89xx.0
 vendor/bin/fm_qsoc_patches|82ab33e928933b8077e77c1532a58b61a3551932
 vendor/bin/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
