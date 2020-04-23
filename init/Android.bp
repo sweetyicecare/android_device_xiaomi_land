@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_mido",
+    name: "libinit_msm8937",
     recovery_available: true,
-    srcs: ["init_mido.cpp"],
+    srcs: ["init_msm8937.cpp"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"

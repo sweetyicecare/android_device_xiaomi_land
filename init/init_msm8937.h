@@ -1,5 +1,7 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
+   Copyright (c) 2017, The LineageOS Project
+
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -12,6 +14,7 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
+
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -25,44 +28,9 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <fcntl.h>
-#include <stdlib.h>
-#include <sys/sysinfo.h>
+#ifndef __INIT_MSM8937__H__
+#define __INIT_MSM8937__H__
 
-#include "vendor_init.h"
-#include "property_service.h"
-#include "log/log.h"
+void init_target_properties();
 
-char const *heapgrowthlimit;
-char const *heapminfree;
-
-using android::init::property_set;
-
-void check_device()
-{
-    struct sysinfo sys;
-
-    sysinfo(&sys);
-
-    if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - Stock rom
-        heapgrowthlimit = "256m";
-        heapminfree = "4m";
-    } else {
-        // from - phone-xxhdpi-2048-dalvik-heap.mk
-        heapgrowthlimit = "192m";
-        heapminfree = "2m";
-   }
-}
-
-void vendor_load_properties()
-{
-    check_device();
-
-    property_set("dalvik.vm.heapstartsize", "16m");
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", "512m");
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", "8m");
-}
+#endif /* __INIT_MSM8937__H__ */
