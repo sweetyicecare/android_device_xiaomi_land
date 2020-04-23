@@ -1,8 +1,15 @@
 # Binaries
 /system/bin/chargeonlymode                      u:object_r:charger_exec:s0
 
+# Block devices
+/dev/block/bootdevice/by-name/persist           u:object_r:persist_block_device:s0
+/dev/block/bootdevice/by-name/userdata          u:object_r:userdata_block_device:s0
+
 # Camera
 /data/vendor/qcam(/.*)?                         u:object_r:vendor_camera_data_file:s0
+
+# Display
+/(product|system/product)/(lib|lib64)/vendor\.display\.config@1\.[0-9]\.so    u:object_r:same_process_hal_file:s0
 
 # Fpc Fingerprint
 /data/fpc(/.*)?					u:object_r:fpc_data_file:s0
@@ -26,6 +33,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_land                           u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_land                     u:object_r:hal_lineage_touch_default_exec:s0
 
+# Input
+/sys/board_properties/virtualkeys.*             u:object_r:touch_sysfs:s0
+
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0
 
@@ -35,11 +45,14 @@
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
 
+# RTC
+/sys/devices/soc/qpnp-rtc-7/rtc/rtc0/hctosys                            u:object_r:sysfs_rtc:s0
+
 # Sensors
 /(mnt/vendor)/persist/sensors(/.*)?                                     u:object_r:persist_sensors_file:s0
 
 # Sys files
 /sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?		u:object_r:sysfs_leds:s0
-/sys/devices/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/disable_keys            u:object_r:proc_touchpanel:s0
+/sys/devices/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/disable_keys            u:object_r:touch_sysfs:s0
 /sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?				u:object_r:sysfs_leds:s0
 /sys/devices/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/enable_dt2w		u:object_r:proc_touchpanel:s0
