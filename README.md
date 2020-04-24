@@ -1,23 +1,23 @@
-# Device Tree for Xiaomi Redmi Note 4 & 4x (Mido)
+# Device Tree for Xiaomi Redmi 3S/3X/3SPrime (Land)
 
 ## Spec Sheet
 
 | Feature                 | Specification                     |
 | :---------------------- | :-------------------------------- |
-| CPU                     | Octa-core 2.0 GHz Cortex-A53      |
-| Chipset                 | Qualcomm MSM8953 Snapdragon 625   |
-| GPU                     | Adreno 506                        |
-| Memory                  | 2/3/4 GB                          |
+| CPU                     | Octa-core 1.4 GHz Cortex-A53      |
+| Chipset                 | Qualcomm MSM8937 Snapdragon 430   |
+| GPU                     | Adreno 505                        |
+| Memory                  | 2/3 GB                            |
 | Shipped Android Version | 6.0.1                             |
-| Storage                 | 32/64 GB                          |
+| Storage                 | 16/32 GB                          |
 | MicroSD                 | Up to 256 GB                      |
 | Battery                 | 4100 mAh (non-removable)          |
-| Dimensions              | 151 x 76 x 8.5 mm                 |
-| Display                 | 1920x1080 pixels, 5.5 (~401 PPI)  |
+| Dimensions              | 139.3 x 69.6 x 8.5 mm             |
+| Display                 | 720x1280 pixels, 5.0" IPS LCD     |
 | Rear Camera             | 13 MP, LED flash                  |
 | Front Camera            | 5 MP                              |
-| Release Date            | January 2017                      |
+| Release Date            | June 2016                         |
 
 ## Device Picture
 
-![Redmi Note 4](http://i01.appmifile.com/webfile/globalimg/7/537557F3-A4F1-2490-E9D3-138B2A11DBF6.png "Redmi Note 4")
+![Redmi 3S](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-3-pro-2.jpg "Redmi 3S")
