@@ -1,6 +1,9 @@
 # Camera
 type camera_socket, file_type, data_file_type;
 
+# Dt2w DT2W
+type sysfs_dt2w, sysfs_type, fs_type;
+
 # Fingerprint
 type fpc_data_file, file_type, data_file_type, core_data_file_type;
 type fpce_socket, file_type;
