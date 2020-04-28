@@ -42,6 +42,9 @@
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0
 
+# LEDs
+/sys/class/leds(/.*)                            u:object_r:sysfs_leds:s0
+
 # Legacy root dirs
 /firmware(/.*)?                                 u:object_r:firmware_file:s0
 
