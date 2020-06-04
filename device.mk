@@ -129,9 +129,10 @@ PRODUCT_PACKAGES += \
     camera.msm8937 \
     Snap
 
-# Consumerir
+# ConsumerIr
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-service.xiaomi_land
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 # Display
 PRODUCT_PACKAGES += \
