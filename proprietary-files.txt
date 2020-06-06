@@ -612,7 +612,7 @@ lib64/libfp_client.so:vendor/lib64/libfp_client.so|c74fac2826f1ef76c32f7bb532c21
 lib64/libfpnav.so:vendor/lib64/libfpnav.so|588301735456b31b09aa0779a7f46481056868dd
 lib64/libfpservice.so:vendor/lib64/libfpservice.so|7bfd1abd31551833079e6ffe3138fa9faf9e9040
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.land|cf73241facae5e4a7ad092f2cda0f8e00c2f5bd9
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.land.rc|db6f25e70a9dcd7d599e2b0fd297f941bb4a61ed
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.land.rc|afbdcc24ccd01abe019ca728bf302f1c26c84ab0
 vendor/lib64/libbindergx.so|eb676b92d13a7835aaab309d5c692151993e016f
 
 # FM Radio - from LA.UM.8.6.r1-04400-89xx.0
