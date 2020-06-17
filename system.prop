@@ -44,6 +44,8 @@ vendor.display.disable_skip_validate=1
 vendor.display.disable_rotator_downscale=1
 vendor.gralloc.disable_ahardware_buffer=1
 sdm.perf_hint_window=50
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
 
 # Media
 mm.enable.qcom_parser=4176895
