@@ -84,4 +84,17 @@ patchelf --replace-needed libbinder.so libbindergx.so "$DEVICE_BLOB_ROOT"/vendor
 patchelf --replace-needed libbinder.so libbindergx.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libfp_client.so
 patchelf --replace-needed libbinder.so libbindergx.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libfpservice.so
 
+patchelf --set-soname "activity_recognition.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/activity_recognition.msm8937.so
+patchelf --set-soname "activity_recognition.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/activity_recognition.msm8937.so
+patchelf --set-soname "gatekeeper.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/gatekeeper.msm8937.so
+patchelf --set-soname "gatekeeper.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/gatekeeper.msm8937.so
+patchelf --set-soname "hwcomposer.msm8937.so" "$DEVICE_BLOB,ROOT"/vendor/lib/hw/hwcomposer.msm8937.so
+patchelf --set-soname "hwcomposer.msm8937.so" "$DEVICE_BLOB,ROOT"/vendor/lib64/hw/hwcomposer.msm8937.so
+patchelf --set-soname "keystore.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/keystore.msm8937.so
+patchelf --set-soname "keystore.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/keystore.msm8937.so
+patchelf --set-soname "sound_trigger.primary.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/sound_trigger.primary.msm8937.so
+patchelf --set-soname "sound_trigger.primary.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/sound_trigger.primary.msm8937.so
+patchelf --set-soname "vulkan.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/vulkan.msm8937.so
+patchelf --set-soname "vulkan.msm8937.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/vulkan.msm8937.so
+
 "${MY_DIR}/setup-makefiles.sh"
