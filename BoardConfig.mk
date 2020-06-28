@@ -164,9 +164,6 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_msm8937
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8937
 TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/init/init_land.cpp
 
-# IPACM
-USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
-
 # Libshim
 TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
 

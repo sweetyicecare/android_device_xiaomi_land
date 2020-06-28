@@ -211,10 +211,8 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml \
     libui_shim
 
-# IPA Manager
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
+# IPACM Data
+$(call inherit-product, device/xiaomi/land/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
 # IRQ
 PRODUCT_COPY_FILES += \
