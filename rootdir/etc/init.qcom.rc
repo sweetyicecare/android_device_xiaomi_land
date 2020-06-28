@@ -383,3 +383,4 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 
 on property:sys.boot_completed=1
     start vendor.qcom-post-boot
+    restart ril-daemon
