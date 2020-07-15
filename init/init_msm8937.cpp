@@ -88,6 +88,16 @@ void check_device()
    }
 }
 
+void set_avoid_gfxaccel_config() {
+    struct sysinfo sys;
+    sysinfo(&sys);
+
+    if (sys.totalram <= 2048ull * 1024 * 1024) {
+        // Reduce memory footprint
+        property_set("ro.config.avoid_gfx_accel", "true");
+    }
+}
+
 void set_zram_size(void)
 {
     FILE *f = fopen("/sys/block/zram0/disksize", "wb");
@@ -117,6 +127,7 @@ void vendor_load_properties()
 {
     check_device();
     set_zram_size();
+    set_avoid_gfxaccel_config();
 
     property_set("dalvik.vm.heapstartsize", heapstartsize);
     property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
