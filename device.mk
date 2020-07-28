@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     copybit.msm8937 \
     gralloc.msm8937 \
+    hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
     liboverlay \
