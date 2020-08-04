@@ -47,7 +47,7 @@ vendor/lib64/libaudioalsa.so|af924f5a37d3066a97175f1343ea5c9484689ee3
 vendor/lib64/libqtigef.so|e7f0dfa3cd7252310c9a01f2bc0e4074e6e78871
 
 # Audiosphere - from LA.UM.8.6.r1-04400-89xx.0
-etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea 
+etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
 framework/audiosphere.jar|c1679f5aca56f0cb24745b3f7d219acd04833bed
 vendor/lib/soundfx/libasphere.so|4d0ccf1c282bb70619d20bf7d79021dc3815a579
 
@@ -1032,11 +1032,17 @@ vendor/lib64/libsensor_reg.so|b977629681598d927830ed99986e818c01c2d34a
 vendor/lib64/libsensor_user_cal.so|a9cd76f06c02e23cb7f1552aa7d51567259faa47
 vendor/lib64/sensors.ssc.so|3642d92d56cd7b21720ff9d11a008040c16e5c5d
 
-# Thermal - from LA.UM.8.6.r1-04400-89xx.0
-vendor/bin/thermal-engine|f035777bb32c1f7a4a8ff2687e82a4e975568e52
--vendor/lib/libthermalclient.so|14593d3551af6ce493b8534d123739cc7d146993
--vendor/lib64/libthermalclient.so|c36b6baf6e82a73e7afaf52589dada5248a69daf
-vendor/lib64/libthermalioctl.so|1d6587245c7e7148638f14254e2f61f6b5552857
+# Thermal - from tissot V10.0.21.0.PDHMIXM
+vendor/bin/hw/android.hardware.thermal@1.0-service|9e1627b1d2f363f947bfc7ac9d363e34319ba140
+vendor/bin/thermal-engine|bbf772d4acf6c11413d2f728140aae63a49d3eae
+vendor/etc/init/android.hardware.thermal@1.0-service.rc|83a76be56b9b0843ff3f2c06186c63156a459acb
+vendor/lib/hw/android.hardware.thermal@1.0-impl.so|33a2ec16f430e1a7bd5ebf54d1ec7e54b3cff5c6
+vendor/lib/hw/thermal.msm8937.so|903f09593ad43d8f60692d5e09005c045ac56157
+-vendor/lib/libthermalclient.so|523476e106337823696f0600b48f057d8c629465
+vendor/lib64/hw/android.hardware.thermal@1.0-impl.so|fce3b6b31cdefa4209f70be50c515eabf2cb0a1c
+vendor/lib64/hw/thermal.msm8937.so|26cfccd4db62f8883d0fe47b43d70f256c2cc5e6
+-vendor/lib64/libthermalclient.so|796c3e071fe9d6fa57598e1205a762cb55720f88
+vendor/lib64/libthermalioctl.so|6eed5b8ca6989809eac27abd4af19bbd6f3845ee
 
 # Time services - from LA.UM.8.6.r1-04400-89xx.0
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|c935b678fdaed033513f044f6492361c3370f9f0
