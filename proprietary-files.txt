@@ -1032,17 +1032,11 @@ vendor/lib64/libsensor_reg.so|b977629681598d927830ed99986e818c01c2d34a
 vendor/lib64/libsensor_user_cal.so|a9cd76f06c02e23cb7f1552aa7d51567259faa47
 vendor/lib64/sensors.ssc.so|3642d92d56cd7b21720ff9d11a008040c16e5c5d
 
-# Thermal - from tissot V10.0.21.0.PDHMIXM
-vendor/bin/hw/android.hardware.thermal@1.0-service|9e1627b1d2f363f947bfc7ac9d363e34319ba140
-vendor/bin/thermal-engine|bbf772d4acf6c11413d2f728140aae63a49d3eae
-vendor/etc/init/android.hardware.thermal@1.0-service.rc|83a76be56b9b0843ff3f2c06186c63156a459acb
-vendor/lib/hw/android.hardware.thermal@1.0-impl.so|33a2ec16f430e1a7bd5ebf54d1ec7e54b3cff5c6
-vendor/lib/hw/thermal.msm8937.so|903f09593ad43d8f60692d5e09005c045ac56157
--vendor/lib/libthermalclient.so|523476e106337823696f0600b48f057d8c629465
-vendor/lib64/hw/android.hardware.thermal@1.0-impl.so|fce3b6b31cdefa4209f70be50c515eabf2cb0a1c
-vendor/lib64/hw/thermal.msm8937.so|26cfccd4db62f8883d0fe47b43d70f256c2cc5e6
--vendor/lib64/libthermalclient.so|796c3e071fe9d6fa57598e1205a762cb55720f88
-vendor/lib64/libthermalioctl.so|6eed5b8ca6989809eac27abd4af19bbd6f3845ee
+# Thermal - from Redmi 7/Y3
+-vendor/lib/libthermalclient.so|241d1e751b3a96c67ac5b618ef38bb39d2a94fa7
+vendor/lib/libthermalfeature.so|1f1eb616ba26b309a2fda7de40c2163a4acaaa35
+-vendor/lib64/libthermalclient.so|54121e31e4a5170f8c50e36ddb57685b6c538a21
+vendor/lib64/libthermalfeature.so|829b2fc0aa8c863d4b4b331e0a2c00663e01efe6
 
 # Time services - from LA.UM.8.6.r1-04400-89xx.0
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|c935b678fdaed033513f044f6492361c3370f9f0
