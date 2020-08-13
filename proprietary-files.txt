@@ -1033,6 +1033,7 @@ vendor/lib64/libsensor_user_cal.so|a9cd76f06c02e23cb7f1552aa7d51567259faa47
 vendor/lib64/sensors.ssc.so|3642d92d56cd7b21720ff9d11a008040c16e5c5d
 
 # Thermal - from Redmi 7/Y3
+vendor/bin/thermal-engine|26371fe1e22775bb17753a9c0a72db8256aa1c71
 -vendor/lib/libthermalclient.so|241d1e751b3a96c67ac5b618ef38bb39d2a94fa7
 vendor/lib/libthermalfeature.so|1f1eb616ba26b309a2fda7de40c2163a4acaaa35
 -vendor/lib64/libthermalclient.so|54121e31e4a5170f8c50e36ddb57685b6c538a21
