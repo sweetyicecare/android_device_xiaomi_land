@@ -636,6 +636,10 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib64/libwvhidl.so
 
+# DRM - from lmi V12.0.3.0.QJKMIXM
+vendor/lib64/libops.so
+vendor/lib64/libspl.so
+
 # Fingerprint
 bin/gx_fpcmd:vendor/bin/gx_fpcmd
 bin/gx_fpd:vendor/bin/gx_fpd
