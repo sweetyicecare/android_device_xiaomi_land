@@ -35,6 +35,8 @@
 #include <string.h>
 #include <sys/sysinfo.h>
 
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 #include <android-base/file.h>
 #include <android-base/properties.h>
 #include <android-base/strings.h>
@@ -45,18 +47,25 @@
 #include "init_msm8937.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
+using std::string;
 using android::base::ReadFileToString;
 using android::base::Trim;
 
-char const *heapstartsize;
-char const *heapgrowthlimit;
-char const *heapsize;
-char const *heapminfree;
-char const *heapmaxfree;
-
 __attribute__ ((weak))
 void init_target_properties() {}
+
+string heapstartsize, heapgrowthlimit, heapsize,
+       heapminfree, heapmaxfree, heaptargetutilization;
+
+void property_override(string prop, string value)
+{
+    auto pi = (prop_info*) __system_property_find(prop.c_str());
+
+    if (pi != nullptr)
+        __system_property_update(pi, value.c_str(), value.size());
+    else
+        __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
+}
 
 void check_device()
 {
@@ -94,7 +103,7 @@ void set_avoid_gfxaccel_config() {
 
     if (sys.totalram <= 2048ull * 1024 * 1024) {
         // Reduce memory footprint
-        property_set("ro.config.avoid_gfx_accel", "true");
+        property_override("ro.config.avoid_gfx_accel", "true");
     }
 }
 
@@ -129,12 +138,12 @@ void vendor_load_properties()
     set_zram_size();
     set_avoid_gfxaccel_config();
 
-    property_set("dalvik.vm.heapstartsize", heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", heapsize);
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 
     init_target_properties();
 }
