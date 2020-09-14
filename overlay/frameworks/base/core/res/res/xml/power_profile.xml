@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
-    <item name="screen.on">63</item>
-    <item name="screen.full">261</item>
+    <item name="screen.on">97</item>
+    <item name="screen.full">377.64</item>
+    <item name="bluetooth.on">1.89</item>
+    <item name="wifi.on">0.41</item>
+    <item name="wifi.active">159.98</item>
+    <item name="dsp.audio">41.5</item>
+    <item name="dsp.video">69.37</item>
+    <item name="camera.flashlight">211.21</item>
+    <item name="camera.avg">322.56</item>
+    <item name="gps.on">34.87</item>
     <array name="cpu.speeds">
         <value>200000</value>
         <value>499200</value>
@@ -22,5 +30,5 @@
     </array>
     <item name="cpu.awake">1.6</item>
     <item name="cpu.idle">1.6</item>
-    <item name="battery.capacity">4000</item>
+    <item name="battery.capacity">4100</item>
 </device>
