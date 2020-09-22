@@ -248,7 +248,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_android \
     libshim_binder \
-    libshims_camera
+    libshims_camera \
+    libshim_dpmframework
 
 # Lights
 PRODUCT_PACKAGES += \
