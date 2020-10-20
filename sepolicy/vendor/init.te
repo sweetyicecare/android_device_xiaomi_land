@@ -21,3 +21,6 @@ allow init system_file:file mounton;
 
 # Wcnss_service
 allow init wcnss_device:chr_file write;
+
+# Socket
+allow init socket_device:sock_file { unlink setattr create };
