@@ -143,7 +143,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
 
 # Malloc
-MALLOC_SVELTE := true
+MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
