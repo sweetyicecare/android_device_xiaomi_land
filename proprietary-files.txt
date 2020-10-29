@@ -596,6 +596,19 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|f4258fe902140e7a35c59f79
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|ad2769dc38c425495c80e0a2cc4f3a4012108917
 vendor/lib64/libwvhidl.so|1b0dce24a4f77883785999b9cf6cb5686232c3b3
 
+# Fingerprint - from MIUI modified
+bin/gx_fpcmd:vendor/bin/gx_fpcmd|b4d35ff21b6a5f9842f9a1979f15828f2c2ae019
+bin/gx_fpd:vendor/bin/gx_fpd|c78f6fdb323fe4883ea495f97687e0cdfb8d5a09
+lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.msm8937.so|f91241d131fab2a4b9272fe8e0825b9bcddb3221
+lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so|580b1fc694003651c05961c8b3f8dd4dff698ab9
+lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so|5ca617bf4ca6899570491c3725cf40b0896dc6c0
+lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so|775c7648c6e8334956b3edb03d4ce1f509460dc0
+lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so|63e1a095a6688137573b0b2d3503019497e0bb4b
+lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so|c9166911d157260b12610a2b2800585e984fbf5a
+lib64/libfp_client.so:vendor/lib64/libfp_client.so|1300e5d4c25504eb29f27e8d3467eaa0825acbef
+lib64/libfpnav.so:vendor/lib64/libfpnav.so|588301735456b31b09aa0779a7f46481056868dd
+lib64/libfpservice.so:vendor/lib64/libfpservice.so|74f3db0378827ba46958eb44635e33c39e1efd72
+
 # FM Radio - from LA.UM.8.6.r1-04700-89xx.0
 vendor/bin/fm_qsoc_patches|82ab33e928933b8077e77c1532a58b61a3551932
 vendor/bin/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
