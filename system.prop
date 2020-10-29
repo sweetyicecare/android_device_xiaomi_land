@@ -42,6 +42,7 @@ sdm.debug.disable_rotator_split=1
 sdm.debug.disable_skip_validate=1
 vendor.display.disable_skip_validate=1
 vendor.display.disable_rotator_downscale=1
+vendor.gralloc.disable_ahardware_buffer=1
 sdm.perf_hint_window=50
 
 # Media
