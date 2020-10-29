@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mido"
+#define LOG_TAG "android.biometrics.fingerprint@2.1-service.land"
 
 #include <binder/ProcessState.h>
 
@@ -69,8 +69,9 @@ int main() {
     configureRpcThreadpool(1, true /* callerWillJoin */);
 
     if (bio != nullptr) {
-        if (::android::OK != bio->registerAsService()) {
-            return 1;
+        android::status_t ret = bio->registerAsService();
+        if (ret != android::OK) {
+            ALOGE("Cannot register BiometricsFingerprint service: %d", ret);
         }
     } else {
         ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
