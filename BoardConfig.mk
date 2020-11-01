@@ -90,9 +90,6 @@ TARGET_TS_MAKEUP := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/bin/mm-qcamera-daemon=23
 
-# Charger
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
 # Display
 TARGET_SCREEN_DENSITY := 280
 

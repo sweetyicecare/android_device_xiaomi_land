@@ -20,6 +20,7 @@ persist.camera.is_type=1
 persist.ts.rtmakeup=true
 
 # Charger
+ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
 # CNE/DPM
