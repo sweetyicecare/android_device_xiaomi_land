@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -104,7 +104,7 @@ typedef struct {
     qcamera_release_data_t   release_data; // any data needs to be release after notify
 } qcamera_data_argm_t;
 
-#define MAX_EXIF_TABLE_ENTRIES 50
+#define MAX_EXIF_TABLE_ENTRIES 17
 class QCameraExif
 {
 public:
@@ -239,7 +239,6 @@ private:
     int32_t m_bufCountPPQ;
     Vector<mm_camera_buf_def_t *> m_InputMetadata; // store input metadata buffers for AOST cases
     size_t m_PPindex;                   // counter for each incoming AOST buffer
-    pthread_mutex_t m_reprocess_lock;   // lock to ensure reprocess job is not freed early.
 
 public:
     cam_dimension_t m_dst_dim;
