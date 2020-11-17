@@ -86,6 +86,10 @@ function blob_fixup() {
         sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${2}"
         ;;
 
+    vendor/lib64/libfpservice.so)
+        patchelf --add-needed "libshim_binder.so" "${2}"
+        ;;
+
     esac
 }
 

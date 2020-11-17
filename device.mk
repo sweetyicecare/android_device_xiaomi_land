@@ -236,6 +236,7 @@ PRODUCT_PACKAGES += \
 
 # Libshim
 PRODUCT_PACKAGES += \
+    libshim_binder \
     libshims_camera
 
 # Lights
