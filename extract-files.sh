@@ -77,7 +77,7 @@ function blob_fixup() {
         patchelf --remove-needed "libbacktrace.so" "${2}"
         patchelf --remove-needed "libunwind.so" "${2}"
         ;;
-    
+
     vendor/bin/gx_fpd)
         patchelf --add-needed "liblog.so" "${2}"
         ;;
@@ -88,6 +88,11 @@ function blob_fixup() {
 
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${2}"
+        ;;
+
+    vendor/lib/libmmcamera2_stats_modules.so)
+        sed -i "s|libgui.so|libwui.so|g" "${2}"
+        patchelf --replace-needed "libandroid.so" "libshim_android.so" "${2}"
         ;;
 
     vendor/lib64/libfpservice.so)
