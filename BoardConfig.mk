@@ -144,9 +144,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 # Libshim
 TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Malloc
 MALLOC_SVELTE := true
 
