@@ -200,7 +200,8 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common
+    ims-ext-common \
+    ims_ext_common.xml
 
 # IRQ balance
 PRODUCT_COPY_FILES += \
@@ -331,6 +332,9 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-lite \
     librmnetctl \
     libxml2
 
@@ -383,6 +387,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
