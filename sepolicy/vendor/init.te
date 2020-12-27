@@ -3,3 +3,7 @@ allow init sysfs_devices_system_cpu:dir r_dir_perms;
 
 # DT2W
 allow init sysfs_dt2w:file { rw_file_perms setattr };
+
+# Lights
+allow init sysfs:file setattr;
+allow init sysfs_leds:lnk_file read;
