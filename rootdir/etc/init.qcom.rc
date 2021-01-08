@@ -392,3 +392,13 @@ on charger
     setprop persist.sys.usb.config mass_storage
     load_system_props
     start vendor.qcom-post-boot
+
+service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+    class late_start
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start qcom-post-boot
