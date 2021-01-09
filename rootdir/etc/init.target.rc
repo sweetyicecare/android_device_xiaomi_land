@@ -34,7 +34,7 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     # GnssConfiguration doesn't actually look at gps.conf, just the debug file
-    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
+    mount none /vendor/etc/gps.conf /system/etc/gps_debug.conf bind
 
     # Mount fstab
     mount_all /vendor/etc/fstab.qcom
