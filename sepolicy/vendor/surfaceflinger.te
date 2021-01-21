@@ -1,0 +1,2 @@
+allow surfaceflinger device:chr_file { ioctl };
+r_dir_file(surfaceflinger, sysfs_kgsl)
