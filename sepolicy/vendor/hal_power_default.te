@@ -1,1 +1,5 @@
 r_dir_file(hal_power_default, debugfs_wlan)
+
+# DT2W
+allow hal_power_default sysfs_dt2w:file rw_file_perms;
+allow hal_power_default sysfs_dt2w:dir search;
