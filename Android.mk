@@ -26,7 +26,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter land santoni,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),land)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

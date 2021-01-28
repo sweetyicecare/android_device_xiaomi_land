@@ -51,12 +51,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    media.camera.ts.monotonic=1 \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
     persist.camera.gyro.android=0 \
     persist.camera.HAL3.enabled=0 \
     persist.camera.is_type=1 \
+    persist.ts.rtmakeup=true \
     vidc.enc.dcvs.extra-buff-count=2
 
 # CNE
@@ -123,6 +125,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ct.device.model=XMP-2016030
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
