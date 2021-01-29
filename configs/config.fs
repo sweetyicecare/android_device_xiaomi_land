@@ -1,6 +1,9 @@
 [AID_VENDOR_QTI_DIAG]
 value:2901
 
+[AID_VENDOR_QDSS]
+value:2902
+
 [AID_VENDOR_RFS]
 value:2903
 
@@ -26,7 +29,7 @@ caps: BLOCK_SUSPEND NET_ADMIN
 mode: 0755
 user: AID_SYSTEM
 group: AID_SYSTEM
-caps: NET_BIND_SERVICE
+caps: NET_BIND_SERVICE SYS_BOOT
 
 [vendor/bin/imsdatadaemon]
 mode: 0755
@@ -52,12 +55,6 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
 
-[system/vendor/bin/cnd]
-mode: 0755
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
-
 [vendor/bin/loc_launcher]
 mode: 0755
 user:  AID_GPS
@@ -70,16 +67,22 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
-[firmware/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
+[vendor/bin/slim_daemon]
+mode: 0755
+user:  AID_GPS
+group: AID_GPS
+caps: NET_BIND_SERVICE
 
-[firmware/image/*]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
+[firmware/]	
+mode: 0771	
+user: AID_SYSTEM	
+group: AID_SYSTEM	
+caps: 0	
+
+[firmware/image/*]	
+mode: 0771	
+user: AID_SYSTEM	
+group: AID_SYSTEM	
 caps: 0
 
 [vendor/firmware_mnt/image/*]
@@ -88,14 +91,20 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[persist/]
+[bt_firmware/]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[dsp/]
-mode: 0771
-user: AID_MEDIA
-group: AID_MEDIA
+[persist/]	
+mode: 0771	
+user: AID_SYSTEM	
+group: AID_SYSTEM	
+caps: 0	
+
+[dsp/]	
+mode: 0771	
+user: AID_MEDIA	
+group: AID_MEDIA	
 caps: 0
