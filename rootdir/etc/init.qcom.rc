@@ -289,10 +289,8 @@ service vendor.rmt_storage /vendor/bin/rmt_storage
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.tftp_server /vendor/bin/tftp_server
-    class main
+    class core
     user root
-    group root system
-    writepid /dev/cpuset/system-background/tasks
 
 # FM
 on property:vendor.hw.fm.init=0
