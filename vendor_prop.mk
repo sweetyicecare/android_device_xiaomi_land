@@ -84,10 +84,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
 
-# GPS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gps.agps_provider=1
-
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
