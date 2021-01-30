@@ -4,3 +4,4 @@ allow qti_init_shell sysfs:file write;
 allow qti_init_shell sysfs_devices_system_cpu:dir r_dir_perms;
 allow qti_init_shell vendor_radio_data_file:dir rw_dir_perms;
 allow qti_init_shell vendor_radio_data_file:file create_file_perms;
+allow qti_init_shell touch_sysfs:file setattr;

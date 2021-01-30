@@ -7,3 +7,9 @@ allow init sysfs_dt2w:file { rw_file_perms setattr };
 # Lights
 allow init sysfs:file setattr;
 allow init sysfs_leds:lnk_file read;
+
+# File
+allow init vendor_file:file execute;
+
+# GPS
+allow init system_file:file mounton;

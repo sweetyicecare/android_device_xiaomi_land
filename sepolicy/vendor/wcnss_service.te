@@ -1,0 +1,1 @@
+allow wcnss_service property_socket:sock_file write;
