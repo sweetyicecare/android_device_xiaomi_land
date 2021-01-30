@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaacwrapper \
     libqcompostprocbundle \
+    libaudioroute \
     libqcomvisualizer \
     libqcomvoiceprocessing
 
