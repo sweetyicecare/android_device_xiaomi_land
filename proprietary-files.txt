@@ -652,6 +652,11 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.land
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.land.rc
 vendor/lib64/libbindergx.so
 
+# FM Radio - from LA.UM.8.6.2.r1-08100-89xx.0
+vendor/bin/fm_qsoc_patches
+vendor/bin/init.qti.fm.sh
+vendor/etc/init/init.qti.fm.rc
+
 # Gatekeeper - from LA.UM.8.6.2.r1-08100-89xx.0
 vendor/lib/hw/gatekeeper.msm8953.so:vendor/lib/hw/gatekeeper.msm8937.so
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so
