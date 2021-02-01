@@ -124,6 +124,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
+# Netmgrd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.use_data_netmgrd=true \
+    persist.data.netmgrd.qos.enable=true \
+    persist.vendor.data.mode=concurrent
+
 # Nitz
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.nitz_plmn="" \
@@ -134,7 +140,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.nitz_sons_0="" \
     persist.vendor.radio.nitz_sons_1="" \
     persist.vendor.radio.nitz_sons_2="" \
-    persist.vendor.radio.nitz_sons_3="" \
+    persist.vendor.radio.nitz_sons_3=""
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
