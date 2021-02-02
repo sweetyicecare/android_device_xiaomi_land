@@ -4331,10 +4331,10 @@ int32_t QCameraParameters::setWaveletDenoise(const QCameraParameters& params)
  *==========================================================================*/
 int32_t QCameraParameters::setTemporalDenoise(const QCameraParameters& params)
 {
-    if ((m_pCapability->qcom_supported_feature_mask & CAM_QCOM_FEATURE_CPP_TNR) == 0) {
-        LOGH("TNR is not supported");
-        return NO_ERROR;
-    }
+#if 1
+    LOGD("TNR is not supported.");
+    return NO_ERROR;
+#endif
 
     const char *str = params.get(KEY_QC_TNR_MODE);
     const char *prev_str = get(KEY_QC_TNR_MODE);
@@ -5439,7 +5439,7 @@ int32_t QCameraParameters::initDefaultParameters()
             AUTO_EXPOSURE_MAP,
             PARAM_MAP_SIZE(AUTO_EXPOSURE_MAP));
     set(KEY_QC_SUPPORTED_AUTO_EXPOSURE, autoExposureValues.string());
-    setAutoExposure(AUTO_EXPOSURE_FRAME_AVG);
+    setAutoExposure(AUTO_EXPOSURE_CENTER_WEIGHTED);
 
     // Set Exposure Compensation
     set(KEY_MAX_EXPOSURE_COMPENSATION, m_pCapability->exposure_compensation_max); // 12
@@ -5454,7 +5454,7 @@ int32_t QCameraParameters::initDefaultParameters()
             ANTIBANDING_MODES_MAP,
             PARAM_MAP_SIZE(ANTIBANDING_MODES_MAP));
     set(KEY_SUPPORTED_ANTIBANDING, antibandingValues);
-    setAntibanding(ANTIBANDING_OFF);
+    setAntibanding(ANTIBANDING_AUTO);
 
     // Set Effect
     String8 effectValues = createValuesString(
@@ -6342,6 +6342,13 @@ int32_t QCameraParameters::setPreviewFpsRange(int min_fps,
     /*This property get value should be the fps that user needs*/
     property_get("persist.debug.set.fixedfps", value, "0");
     fixedFpsValue = atoi(value);
+
+    // Don't allow function callers to request min fps same as max fps
+    // I mean SnapdragonCamera.
+    if (!isHfrMode() && max_fps >= 24000 && min_fps == max_fps) {
+        LOGH("min_fps %d same as max_fps %d, setting min_fps to 7000", min_fps, max_fps);
+        min_fps = 7000;
+    }
 
     LOGD("E minFps = %d, maxFps = %d , vid minFps = %d, vid maxFps = %d",
                  min_fps, max_fps, vid_min_fps, vid_max_fps);
@@ -7797,6 +7804,12 @@ int32_t QCameraParameters::setCDSMode(const QCameraParameters& params)
     const char *video_str = params.get(KEY_QC_VIDEO_CDS_MODE);
     const char *video_prev_str = get(KEY_QC_VIDEO_CDS_MODE);
     int32_t rc = NO_ERROR;
+
+
+#if 1
+    LOGD("CDS is not supported. Not applying user params for this.");
+    return rc;
+#endif
 
     if (m_bRecordingHint_new == true) {
         if (video_str) {
@@ -13764,6 +13777,12 @@ int32_t QCameraParameters::setCDSMode(int32_t cds_mode, bool initCommit)
     }
 
     int32_t rc = NO_ERROR;
+
+#if 1
+    LOGD("CDS is not supported.");
+    return rc;
+#endif
+
     if (ADD_SET_PARAM_ENTRY_TO_BATCH(m_pParamBuf, CAM_INTF_PARM_CDS_MODE, cds_mode)) {
         LOGE("Failed to update cds mode");
         return BAD_VALUE;

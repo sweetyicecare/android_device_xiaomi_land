@@ -3384,6 +3384,7 @@ int QCamera3HardwareInterface::processCaptureRequest(
         int32_t tintless_value = 1;
         ADD_SET_PARAM_ENTRY_TO_BATCH(mParameters,
                 CAM_INTF_PARM_TINTLESS, tintless_value);
+#if 0
         //Disable CDS for HFR mode or if DIS/EIS is on.
         //CDS is a session parameter in the backend/ISP, so need to be set/reset
         //after every configure_stream
@@ -3395,6 +3396,7 @@ int QCamera3HardwareInterface::processCaptureRequest(
                 LOGE("Failed to disable CDS for HFR mode");
 
         }
+#endif
 
         setMobicat();
 
@@ -7798,25 +7800,12 @@ camera_metadata_t* QCamera3HardwareInterface::translateCapabilityToMetadata(int 
             i++) {
         float range = gCamCapability[mCameraId]->fps_ranges_tbl[i].max_fps -
             gCamCapability[mCameraId]->fps_ranges_tbl[i].min_fps;
-        if (type == CAMERA3_TEMPLATE_PREVIEW ||
-                type == CAMERA3_TEMPLATE_STILL_CAPTURE ||
-                type == CAMERA3_TEMPLATE_ZERO_SHUTTER_LAG) {
-            if (range > max_range) {
-                fps_range[0] =
-                    (int32_t)gCamCapability[mCameraId]->fps_ranges_tbl[i].min_fps;
-                fps_range[1] =
-                    (int32_t)gCamCapability[mCameraId]->fps_ranges_tbl[i].max_fps;
-                max_range = range;
-            }
-        } else {
-            if (range < 0.01 && max_fixed_fps <
-                    gCamCapability[mCameraId]->fps_ranges_tbl[i].max_fps) {
-                fps_range[0] =
-                    (int32_t)gCamCapability[mCameraId]->fps_ranges_tbl[i].min_fps;
-                fps_range[1] =
-                    (int32_t)gCamCapability[mCameraId]->fps_ranges_tbl[i].max_fps;
-                max_fixed_fps = gCamCapability[mCameraId]->fps_ranges_tbl[i].max_fps;
-            }
+        if (range > max_range) {
+            fps_range[0] =
+                (int32_t)gCamCapability[mCameraId]->fps_ranges_tbl[i].min_fps;
+            fps_range[1] =
+                (int32_t)gCamCapability[mCameraId]->fps_ranges_tbl[i].max_fps;
+            max_range = range;
         }
     }
     settings.update(ANDROID_CONTROL_AE_TARGET_FPS_RANGE, fps_range, 2);
@@ -8877,6 +8866,7 @@ int QCamera3HardwareInterface::translateToHalMetadata
         }
     }
 
+#if 0
     // CDS for non-HFR non-video mode
     if ((mOpMode != CAMERA3_STREAM_CONFIGURATION_CONSTRAINED_HIGH_SPEED_MODE) &&
             !(m_bIsVideo) && frame_settings.exists(QCAMERA3_CDS_MODE)) {
@@ -8905,6 +8895,7 @@ int QCamera3HardwareInterface::translateToHalMetadata
             rc = BAD_VALUE;
         }
     }
+#endif
 
     if (frame_settings.exists(ANDROID_SENSOR_TEST_PATTERN_MODE)) {
         int32_t fwk_testPatternMode =
