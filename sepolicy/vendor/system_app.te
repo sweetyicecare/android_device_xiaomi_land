@@ -3,3 +3,6 @@ set_prop(system_app, fm_prop)
 
 # Allow binder calls to fingerprintd
 binder_call(system_app, fingerprintd)
+
+# zram
+r_dir_file(system_app sysfs_zram)

@@ -59,6 +59,9 @@
 # RTC
 /sys/devices/soc/qpnp-rtc-7/rtc/rtc0/hctosys            u:object_r:sysfs_rtc:s0
 
+# Sensors
+/(mnt/vendor)/persist/sensors(/.*)?                                     u:object_r:persist_sensors_file:s0
+
 # Touch
 /sys/devices(/platform)?/soc/78b7000.i2c/i2c-3/3-[0-9a-f]+/disable_keys   u:object_r:touch_sysfs:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_8937 u:object_r:hal_lineage_touch_default_exec:s0

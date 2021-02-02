@@ -14,7 +14,10 @@ allow qti_init_shell {
 }:property_service set;
 
 # File
-allow init vendor_file:file execute;
+allow init vendor_file:file { execute getattr };
 
 # GPS
 allow init system_file:file mounton;
+
+# Wcnss_service
+allow init wcnss_device:chr_file write;
