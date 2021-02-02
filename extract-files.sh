@@ -77,26 +77,6 @@ function blob_fixup() {
         sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${2}"
         ;;
 
-    vendor/bin/gx_fpcmd)
-        patchelf --replace-needed "libbindergx.so" "${2}"
-        ;;
-
-    vendor/bin/gx_fpd)
-        patchelf --replace-needed "libbindergx.so" "${2}"
-        ;;
-
-    vendor/lib64/hw/fingerprint.goodix.so)
-        patchelf --replace-needed "libbindergx.so" "${2}"
-        ;;
-
-    vendor/lib64/libfp_client.so)
-        patchelf --replace-needed "libbindergx.so" "${2}"
-        ;;
-
-    vendor/lib64/libfpservice.so)
-        patchelf --replace-needed "libbindergx.so" "${2}"
-        ;;
-
     esac
 }
 
