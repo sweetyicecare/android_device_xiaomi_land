@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 # Inherit some common AOSiP stuff
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
+# Inherit Google Play System Update stuff
+$(call inherit-product-if-exists, vendor/google/psu/google-psu.mk)
+
 # Inherit from land device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
