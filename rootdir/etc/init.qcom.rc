@@ -133,13 +133,6 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
-    # Goodix Fingerprint
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
-    setprop persist.sys.fp.vendor none
-    start gx_fpd
-
     # IR blaster
     chown root system /sys/class/leds/infrared/transmit
     chown root system /sys/class/leds/infrared/brightness
@@ -269,6 +262,8 @@ on property:vendor.media.target.version=*
 
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
+    restart vendor.fps_hal
+    restart vendor.gx_fpd
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
@@ -350,24 +345,6 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
-
-service gx_fpd /vendor/bin/gx_fpd
-    class core
-    user system
-    group system
-    disabled
-
-on property:persist.sys.fp.vendor=switchf
-    stop gx_fpd
-    setprop persist.sys.fp.vendor searchf
-    setprop ro.boot.fpsensor fpc
-    start fps_hal
-
-on property:persist.sys.fp.vendor=goodix
-    setprop persist.sys.fp.onstart 1
-    setprop ro.boot.fpsensor gdx
-    setprop ro.hardware.fingerprint goodix
-    start fps_hal
 
 service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     override
