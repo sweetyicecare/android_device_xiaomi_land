@@ -1119,7 +1119,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib/vndk-sp/libcutils.so
 vendor/lib/vndk/libprocessgroup.so
 
-# Wi-Fi - from Tissot PKQ1.180917.001.V10.0.18.0.PDHMIXM
+# Wi-Fi - from olive - QKQ1.191014.001
 vendor/bin/wcnss_service
 
 # WiFi Display - from LA.UM.8.6.2.r1-08100-89xx.0
