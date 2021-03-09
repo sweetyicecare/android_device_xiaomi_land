@@ -22,9 +22,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosip
 
-# Properties
--include $(LOCAL_PATH)/vendor_prop.mk
-
 # AAPT
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
