@@ -38,8 +38,9 @@ PRODUCT_BOARD_PLATFORM := msm8937
 PRODUCT_USES_QCOM_HARDWARE := true
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+# we using prebuilt bootanimation
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
