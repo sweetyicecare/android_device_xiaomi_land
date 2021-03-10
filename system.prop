@@ -91,3 +91,5 @@ debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000
 # Time Services
 persist.vendor.delta_time.enable=true
 
+# Zygote Preforking
+persist.device.config.runtime_native.uasp_pool_enabled=true
