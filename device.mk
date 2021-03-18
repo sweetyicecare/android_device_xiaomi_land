@@ -212,8 +212,10 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
 
-# IPACM Data
-$(call inherit-product, device/xiaomi/land/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
 
 # IRQ balance
 PRODUCT_COPY_FILES += \
