@@ -73,6 +73,10 @@ fi
 function blob_fixup() {
     case "${1}" in
 
+    lib/libwfdmmsink.so)
+        patchelf --add-needed "libshim_wfdmmsink.so" "${2}"
+        ;;
+
     product/lib64/libdpmframework.so)
         patchelf --add-needed "libshim_dpmframework.so" "${2}"
         ;;
