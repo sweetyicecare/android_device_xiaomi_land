@@ -1,1 +1,2 @@
 allow system_server radio_prop:property_service set;
+get_prop(radio, vendor_qcom_ims_prop)
