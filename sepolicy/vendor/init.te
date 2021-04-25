@@ -10,7 +10,7 @@ allow init sysfs_leds:lnk_file read;
 
 # FM
 allow qti_init_shell { 
-    fm_prop
+    vendor_fm_prop
 }:property_service set;
 
 # File
