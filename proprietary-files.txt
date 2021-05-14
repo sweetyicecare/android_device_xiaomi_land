@@ -787,16 +787,19 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib64/hw/sound_trigger.primary.msm8937.so
 
-# Media - from LA.UM.8.6.2.r1-08100-89xx.0
-lib/extractors/libmmparserextractor.so
+# Media - from LA.UM.9.6.2.r1-04100-89xx.0
 lib/libFileMux.so
-lib/libmmosal.so
-lib/libmmparser_lite.so
 lib/libOmxMux.so
-lib64/libmmosal.so
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmosal_proprietary.so
+system_ext/lib/libavenhancements.so
+system_ext/lib/libmmosal.so
+system_ext/lib/libmmparser_lite.so
+system_ext/lib/extractors/libmmparserextractor.so
+system_ext/lib64/libavenhancements.so
+system_ext/lib64/libmmosal.so
+vendor/etc/seccomp_policy/mediacodec.policy
+vendor/etc/seccomp_policy/mediaextractor.policy
+vendor/lib/libFlacSwDec.so
+vendor/lib/libmmosal.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -809,8 +812,12 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libvpplibrary.so
 
 # Media OMX - from - LA.UM.8.6.r1-01900-89xx.0
 vendor/lib/libAlacSwDec.so
@@ -1107,22 +1114,26 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # Wi-Fi - from olive - QKQ1.191014.001
 vendor/bin/wcnss_service
 
-# WiFi Display - from olive - QKQ1.191014.001
+# WiFi Display - from LA.UM.9.6.2.r1-04100-89xx.0
 bin/wfdservice
 etc/init/wfdservice.rc
-etc/wfdconfig.xml
 etc/wfdconfigsink.xml
+etc/wfdconfig.xml
 -framework/WfdCommon.jar
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
+lib64/libmmrtpdecoder.so
+lib64/libmmrtpencoder.so
 lib/libwfdavenhancements.so
 lib/libwfdclient.so
 lib/libwfdcodecv4l2.so
 lib/libwfdcommonutils.so
 lib/libwfdconfigutils.so
+lib/libwfddisplayconfig.so
 lib/libwfdmminterface.so
-lib/libwfdmmsink.so
+lib/libwfdmmsink.so|9264f5bceff4f4161d1ea8457cdb3e95f5c98b31
 lib/libwfdmmsrc.so
 lib/libwfdnative.so
 lib/libwfdrtsp.so
@@ -1138,10 +1149,10 @@ lib64/libwfdnative.so
 -priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdhaldsmanager.so
 vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfddisplayconfig_proprietary.so
 vendor/lib/libwfdmmservice.so
 vendor/lib/libwfdmodulehdcpsession.so

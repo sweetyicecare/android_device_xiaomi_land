@@ -134,6 +134,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     libdisplayconfig \
     libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
     libqdMetaData.system \
     libtinyxml \
     memtrack.msm8937 \
