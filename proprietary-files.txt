@@ -28,34 +28,32 @@ etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_General_cal.acdb:vendor/etc/acdb
 etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Global_cal.acdb:vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Global_cal.acdb
 etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Bluetooth_cal.acdb:vendor/etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Bluetooth_cal.acdb
 
-# ADSP - from LA.UM.8.6.2.r1-08100-89xx.0
+# ADSP - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
 
-# ADSP modules - from LA.UM.8.6.2.r1-08100-89xx.0
+# ADSP modules - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
-vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 
 # ANT+ (vendor) - from LA.UM.8.6.2.r1-08100-89xx.0
 product/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Audio - from LA.UM.8.6.2.r1-08100-89xx.0
+# Audio - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -63,6 +61,7 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
+-vendor/lib/libaudioparsers.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
@@ -75,7 +74,11 @@ vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libaudioalsa.so
+-vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
 
 # Bluetooth - from olive - QKQ1.191014.001
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -616,6 +619,13 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/libops.so
 vendor/lib64/libspl.so
 
+# DSP - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/bin/dspservice
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
+
 # Fingerprint
 bin/gx_fpcmd:vendor/bin/gx_fpcmd
 bin/gx_fpd:vendor/bin/gx_fpd
@@ -773,10 +783,11 @@ vendor/firmware/a530_pm4.fw
 vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so
 
-# Listen - from LA.UM.8.6.2.r1-08100-89xx.0
-vendor/lib/hw/sound_trigger.primary.msm8953.so:vendor/lib/hw/sound_trigger.primary.msm8937.so
+# Listen - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
+vendor/lib64/hw/sound_trigger.primary.msm8937.so
 
 # Media - from LA.UM.8.6.2.r1-08100-89xx.0
 lib/extractors/libmmparserextractor.so
