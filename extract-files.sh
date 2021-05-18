@@ -77,10 +77,6 @@ function blob_fixup() {
         patchelf --add-needed "libshim_wfdmmsink.so" "${2}"
         ;;
 
-    product/lib64/libdpmframework.so)
-        patchelf --add-needed "libshim_dpmframework.so" "${2}"
-        ;;
-
     vendor/bin/gx_fpcmd|vendor/bin/gx_fpd)
         patchelf --remove-needed "libbacktrace.so" "${2}"
         patchelf --remove-needed "libunwind.so" "${2}"
